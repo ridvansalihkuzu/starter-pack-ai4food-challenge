@@ -1,7 +1,4 @@
-from torch import nn
-from torch import nn
 import breizhcrops as bzh
-
 from torchvision import models
 import torch
 from torch import nn
