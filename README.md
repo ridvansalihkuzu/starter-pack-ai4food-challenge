@@ -1,4 +1,4 @@
-# AI4Food - A Challenge for Crop Type Classification at Field Level
+# AI4Food - A Challenge for Crop Type Classification
 
 ## Get started with the challenge
 
