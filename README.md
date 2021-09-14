@@ -24,27 +24,3 @@ As per challenge rules, the following applies:
 
 Code for the winning solutions will be reviewed to ensure rules have been followed.
 
-0. [Requirements](#requirements)
-
-
-1. [Data overview](#data-overview)
-
-   1.1. [Area of Interest for Brandenburg](#aoi1)
-   
-   1.2. [Data Types for Brandenburg](#dt1)
-   
-   1.3. [Area of Interest for South Africa](#aoi2)
-
-   1.4. [Data Types for South Africa](#dt2)
-   
-   
-2. [Data processing and ML Training](#data-processing)
-    
-   2.1. [Exploiting _Planet Fusion_ Data](#epfd)
-   
-   2.2. [Exploiting _Sentinel-2_ Data](#es2d)
-
-
-3. [Prepare a Submission](#submission-example)
-
-   3.1 [Submission Example](#prepare-a-submission)
