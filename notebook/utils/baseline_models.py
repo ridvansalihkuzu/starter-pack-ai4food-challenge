@@ -1,3 +1,9 @@
+'''
+For the further information about the baseline model please refer to
+Kondmann, Lukas, et al. (2021),
+[DENETHOR: The DynamicEarthNET dataset for Harmonized, inter-Operable, analysis-Ready, daily crop monitoring](https://openreview.net/pdf?id=uUa4jNMLjrL)
+'''
+
 import breizhcrops as bzh
 from torchvision import models
 import torch
