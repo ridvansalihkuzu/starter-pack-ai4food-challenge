@@ -16,12 +16,13 @@ SUPPORTED_SPATIAL_MODELS = ['resnet18', 'resnet34', 'resnet50', 'resnet101','res
                             'vgg16_bn', 'vgg19_bn', 'vgg19', "alexnet", 'squeezenet1_0']
 
 class SpatiotemporalModel(nn.Module):
+    """
+    A wrapper around torchvision (spatial) and breizhcrops models (temporal)
+    """
     def __init__(self, spatial_backbone="mobilenet_v3_small", temporal_backbone="LSTM", input_dim=4,
                  num_classes=9, sequencelength=365, pretrained_spatial=True, device="cpu"):
-        """
-        A wrapper around torchvision (spatial) and breizhcrops models (temporal)
-        """
         super(SpatiotemporalModel, self).__init__()
+
 
         if spatial_backbone != "none":
             self.spatial_encoder = SpatialEncoder(backbone=spatial_backbone , input_dim=input_dim, pretrained=pretrained_spatial)
