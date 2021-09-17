@@ -123,7 +123,7 @@ class S1Reader(Dataset):
         ignore = labels.geometry.area > min_area_to_ignore
         print(f"INFO: Ignoring {(~ignore).sum()}/{len(ignore)} fields with area < {min_area_to_ignore}m2")
         labels = labels.loc[ignore]
-        #labels = labels.to_crs(crs) TODO: CHECK IF NECESSARY
+        labels = labels.to_crs(crs) #TODO: CHECK IF NECESSARY
 
         vv = np.load(os.path.join(rootpath, "data", "VV.npy"))
         vh = np.load(os.path.join(rootpath, "data", "VH.npy"))
