@@ -107,7 +107,7 @@ class PlanetReader(torch.utils.data.Dataset):
         print(f"INFO: Ignoring {(~mask).sum()}/{len(mask)} fields with area < {min_area_to_ignore}m2")
 
         labels = labels.loc[mask]
-        #labels = labels.to_crs(crs) TODO: CHECK IF REQUIRED
+        labels = labels.to_crs(crs) #TODO: CHECK IF REQUIRED
 
         for index, feature in tqdm(labels.iterrows(), total=len(labels), position=0, leave=True, desc="INFO: Extracting time series into the folder: {}".format(npyfolder)):
 
