@@ -123,7 +123,7 @@ class S2Reader(Dataset):
         ignore = labels.geometry.area > min_area_to_ignore
         print(f"INFO: Ignoring {(~ignore).sum()}/{len(ignore)} fields with area < {min_area_to_ignore}m2")
         labels = labels.loc[ignore]
-        #labels = labels.to_crs(crs) TODO: CHECK IF NECESSARY
+        labels = labels.to_crs(crs) #TODO: CHECK IF NECESSARY
 
         bands = np.load(os.path.join(rootpath, "data", "BANDS.npy"))
         clp = np.load(os.path.join(rootpath, "data", "CLP.npy")) #CLOUD PROBABILITY
