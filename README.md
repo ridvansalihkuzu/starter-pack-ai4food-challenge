@@ -37,7 +37,7 @@ The challenge is organized by [Planet](https://www.planet.com/), [Radiant Earth]
          align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.hzdr.de/db/PicOri?pOid=60735" width="150" 
          align="left" style="padding-top: 15px; padding-right: 5px; padding-bottom: 20px; padding-left: 5px"/>
-    <img src="https://www.arianespace.com/wp-content/uploads/2014/10/esa-logo.bmp" width="150" 
+    <img src="https://www.arianespace.com/wp-content/uploads/2014/10/esa-logo.bmp" width="140" 
          align="left" style="padding-top: 5px; padding-right: 5px; padding-bottom: 25px; padding-left: 5px"/>
     
 </div>
