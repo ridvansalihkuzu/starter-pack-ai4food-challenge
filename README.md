@@ -28,7 +28,7 @@ The challenge is organized by [Planet](https://www.planet.com/), [Radiant Earth]
 
 <div>
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="120" 
-         align="left" style="padding-top: 10px; padding-right: 5px; padding-bottom: 20px; padding-left: 5px"/>
+         align="left" style="padding-top: 10px; padding-right: 5px; padding-bottom: 30px; padding-left: 5px"/>
     <img src="https://www.mlhub.earth/assets/images/radiant_logo_2.png" width="150" 
          align="left" style="padding-top: 20px; padding-right: 5px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.hzdr.de/coltray/img/TUM_logo.png" width="150" 
