@@ -28,17 +28,17 @@ The challenge is organized by [Planet](https://www.planet.com/), [Radiant Earth]
 
 <div>
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="140" 
-         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.mlhub.earth/assets/images/radiant_logo_2.png" width="160" 
-         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.hzdr.de/coltray/img/TUM_logo.png" width="160" 
-         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.etp4hpc.eu/img/image/fotos/dlr_logo_engl_schwarz.jpg?&q=100" width="160" 
-         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.hzdr.de/db/PicOri?pOid=60735" width="160" 
-         align="left" style="padding-top: 15px; padding-right: 5px; padding-bottom: 20px; padding-left: 15px"/>
+         align="left" style="padding-top: 15px; padding-right: 5px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.arianespace.com/wp-content/uploads/2014/10/esa-logo.bmp" width="160" 
-         align="left" style="padding-top: 10px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+         align="left" style="padding-top: 10px; padding-right: 15px; padding-bottom: 20px; padding-left: 5px"/>
     
 </div>
 
