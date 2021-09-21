@@ -27,7 +27,7 @@ Code for the winning solutions will be reviewed to ensure rules have been follow
 The challenge is organized by [Planet](https://www.planet.com/), [Radiant Earth](https://www.radiant.earth/), [TUM](https://www.tum.de/), [DLR](https://www.dlr.de/DE/Home/home_node.html), and the [Helmholtz AI](https://www.helmholtz.ai/), and hosted by [European Space Agency](https://www.esa.int/).
 
 <div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="130" 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="120" 
          align="left" style="padding-top: 20px; padding-right: 5px; padding-bottom: 20px; padding-left: 5px"/>
     <img src="https://www.mlhub.earth/assets/images/radiant_logo_2.png" width="150" 
          align="left" style="padding-top: 20px; padding-right: 5px; padding-bottom: 20px; padding-left: 5px"/>
