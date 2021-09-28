@@ -30,7 +30,7 @@ The challenge is organized by [Planet](https://www.planet.com/), [Radiant Earth]
 <div>
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="125" 
          align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
-    <img src="https://www.mlhub.earth/assets/images/radiant_logo_2.png" width="145" 
+    <img src="https://mlhub.earth/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fpublic%2Fimages%2Flogo%2Fradiant_mlhub.b51aa561c68acf2b9d03decd5a804ac6.png&w=750&q=75" width="145" 
          align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
     <img src="https://www.hzdr.de/coltray/img/TUM_logo.png" width="145" 
          align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
