@@ -9,6 +9,7 @@ import os
 import torch
 from torch.utils.data import Dataset
 import zipfile
+import tarfile
 from sh import gunzip
 from glob import glob
 import pickle
@@ -38,7 +39,7 @@ class S2Reader(Dataset):
         self.data_transform = transform
         self.selected_time_points=selected_time_points
         self.crop_ids = label_ids
-        if label_ids is not None:
+        if label_ids is not None and not isinstance(label_ids, list):
             self.crop_ids = label_ids.tolist()
 
         self.npyfolder = input_dir.replace(".zip", "/time_series")
@@ -85,33 +86,21 @@ class S2Reader(Dataset):
         return image_stack, label, mask, feature.fid
 
     @staticmethod
-    def _setup(zippath, labelgeojson, npyfolder, min_area_to_ignore=1000,include_cloud=False):
+    def _setup(rootpath, labelgeojson, npyfolder, min_area_to_ignore=1000,include_cloud=False):
         """
          THIS FUNCTION PREPARES THE PLANET READER BY SPLITTING AND RASTERIZING EACH CROP FIELD AND SAVING INTO SEPERATE FILES FOR SPEED UP THE FURTHER USE OF DATA.
 
          This utility function unzipps a dataset and performs a field-wise aggregation.
          results are written to a .npz cache with same name as zippath
 
-         :param zippath: directory of input images in ZIP format
+         :param rootpath: directory of input images in ZIP format
          :param labelgeojson: directory of ground-truth polygons in GeoJSON format
          :param npyfolder: folder to save the field data for each field polygon
          :param min_area_to_ignore: threshold m2 to eliminate small agricultural fields less than a certain threshold. By default, threshold is 1000 m2
          :param include_cloud: It includes cloud probabilities inti image_stack if TRUE, othervise it saves the cloud info as sepeate array
          :return: labels of the saved fields
          """
-        datadir = os.path.dirname(zippath)
-        rootpath = zippath.replace(".zip", "")
-        if not (os.path.exists(rootpath) and os.path.isdir(rootpath)):
-            print(f"INFO: Unzipping {zippath} to {datadir}")
-            with zipfile.ZipFile(zippath, 'r') as zip_ref:
-                zip_ref.extractall(datadir)
-        else:
-            print(f"INFO: Found folder in {rootpath}, no need to unzip")
 
-        # find all .gz-ipped files and unzip
-        for gz in glob(os.path.join(rootpath, "*", "*.gz")) + glob(os.path.join(rootpath, "*.gz")):
-            print(f"INFO: Unzipping {gz}")
-            gunzip(gz)
 
         with open(os.path.join(rootpath, "bbox.pkl"), 'rb') as f:
             bbox = pickle.load(f)
@@ -125,8 +114,8 @@ class S2Reader(Dataset):
         labels = labels.loc[ignore]
         labels = labels.to_crs(crs) #TODO: CHECK IF NECESSARY
 
-        bands = np.load(os.path.join(rootpath, "data", "BANDS.npy"))
-        clp = np.load(os.path.join(rootpath, "data", "CLP.npy")) #CLOUD PROBABILITY
+        bands = np.load(os.path.join(rootpath, "bands.npy"))
+        clp = np.load(os.path.join(rootpath, "clp.npy")) #CLOUD PROBABILITY
         if include_cloud:
             bands = np.concatenate([bands, clp], axis=-1) # concat cloud probability
         _, width, height, _ = bands.shape
@@ -139,12 +128,12 @@ class S2Reader(Dataset):
         fid_mask = features.rasterize(zip(labels.geometry, labels.fid), all_touched=True,
                                       transform=transform, out_shape=(width, height))
         assert len(np.unique(fid_mask)) > 0, f"WARNING: Vectorized fid mask contains no fields. " \
-                                             f"Does the label geojson {labelgeojson} cover the region defined by {zippath}?"
+                                             f"Does the label geojson {labelgeojson} cover the region defined by {rootpath}?"
 
         crop_mask = features.rasterize(zip(labels.geometry, labels.crop_id), all_touched=True,
                                        transform=transform, out_shape=(width, height))
         assert len(np.unique(crop_mask)) > 0, f"WARNING: Vectorized fid mask contains no fields. " \
-                                              f"Does the label geojson {labelgeojson} cover the region defined by {zippath}?"
+                                              f"Does the label geojson {labelgeojson} cover the region defined by {rootpath}?"
 
         for index, feature in tqdm(labels.iterrows(), total=len(labels), position=0, leave=True, desc="INFO: Extracting time series into the folder: {}".format(npyfolder)):
 
@@ -173,7 +162,8 @@ if __name__ == '__main__':
     EXAMPLE USAGE OF DATA READER
     """
 
-    zippath = "../data/sentinel-2/s2-utm-34S-19E-258N-2017.zip"
-    labelgeojson = "../data/south-africa-gt/sa-19E-258N-crop-labels-train-2017.geojson"
+    zippath = "../data/dlr_fusion_competition_germany_train_source_sentinel_2.tar.gz"
+
+    labelgeojson = "../data/dlr_fusion_competition_germany_train_labels/dlr_fusion_competition_germany_train_labels_33N_18E_242N/labels.geojson"
     ds = S2Reader(zippath, labelgeojson)
     X,y,m,fid = ds[0]

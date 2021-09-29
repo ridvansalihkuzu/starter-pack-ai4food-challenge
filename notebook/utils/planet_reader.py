@@ -34,7 +34,7 @@ class PlanetReader(torch.utils.data.Dataset):
         self.data_transform = transform
         self.selected_time_points = selected_time_points
         self.crop_ids=label_ids
-        if label_ids is not None:
+        if label_ids is not None and not isinstance(label_ids, list):
             self.crop_ids=label_ids.tolist()
 
         self.npyfolder = os.path.abspath(input_dir + "time_series")
@@ -93,7 +93,7 @@ class PlanetReader(torch.utils.data.Dataset):
         :return: labels of the saved fields
         """
 
-        inputs = glob.glob(input_dir + '*.tif', recursive=True)
+        inputs = glob.glob(input_dir + '/*/*.tif', recursive=True)
         tifs = sorted(inputs)
         labels = gpd.read_file(label_dir)
 
@@ -143,7 +143,8 @@ if __name__ == '__main__':
     EXAMPLE USAGE OF DATA READER
     """
 
-    zippath = "../data/planet/UTM-24000/34S/19E-258N/PF-SR/"
-    labelgeojson = "../data/south-africa-gt/sa-19E-258N-crop-labels-train-2017.geojson"
+    zippath = "../data/dlr_fusion_competition_germany_train_source_planet_5day"
+
+    labelgeojson = "../data/dlr_fusion_competition_germany_train_labels/dlr_fusion_competition_germany_train_labels_33N_18E_242N/labels.geojson"
     ds = PlanetReader(zippath, labelgeojson, selected_time_points=[2,3,4])
     X,y,m,fid = ds[0]

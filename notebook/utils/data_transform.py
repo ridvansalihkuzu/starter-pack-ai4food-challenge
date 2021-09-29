@@ -14,15 +14,17 @@ class EOTransformer():
     """
     THIS CLASS DEFINE A SAMPLE TRANSFORMER FOR DATA AUGMENTATION IN THE TRAINING, VALIDATION, AND TEST DATA LOADING
     """
-    def __init__(self,spatial_encoder=True, image_size=32):
+    def __init__(self,spatial_encoder=True, normalize=True, image_size=32):
         '''
         THIS FUNCTION INITIALIZES THE DATA TRANSFORMER.
         :param spatial_encoder: It determine if spatial information will be exploited or not. It should be determined in line with the training model.
+        :param normalize: It determine if the data to be normalized or not. Default is TRUE
         :param image_size: It determine how the data is partitioned into the NxN windows. Default is 32x32
         :return: None
         '''
         self.spatial_encoder = spatial_encoder
         self.image_size=image_size
+        self.normalize=normalize
 
     def transform(self,image_stack, mask=None):
         '''
@@ -38,6 +40,7 @@ class EOTransformer():
         else:  # crop/pad image to fixed size + augmentations: T, D, H, W = image_stack.shape
             if image_stack.shape[2] >= self.image_size and image_stack.shape[3] >= self.image_size:
                 image_stack, mask = random_crop(image_stack, mask, self.image_size)
+
 
             image_stack, mask = crop_or_pad_to_size(image_stack, mask, self.image_size)
 
@@ -59,8 +62,9 @@ class EOTransformer():
         image_stack = image_stack * 1e-4
 
         # z-normalize
-        image_stack -= 0.1014 + np.random.normal(scale=0.01)
-        image_stack /= 0.1171 + np.random.normal(scale=0.01)
+        if self.normalize:
+            image_stack -= 0.1014 + np.random.normal(scale=0.01)
+            image_stack /= 0.1171 + np.random.normal(scale=0.01)
 
         return torch.from_numpy(np.ascontiguousarray(image_stack)).float(), torch.from_numpy(np.ascontiguousarray(mask))
 
