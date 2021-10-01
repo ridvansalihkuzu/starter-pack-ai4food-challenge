@@ -1,4 +1,4 @@
-# AI4Food - A Challenge for Crop Type Classification
+# AI4FoodSecurity - A Challenge for Crop Type Classification
 
 ![header](notebook/utils/image.png)
 
