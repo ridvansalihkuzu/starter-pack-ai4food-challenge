@@ -1,5 +1,7 @@
 # AI4Food - A Challenge for Crop Type Classification
 
+![header](notebook/utils/image.png)
+
 ## Get started with the challenge
 
 This notebook will get you started with downloading, exploring and analysing the input and output data of the challenge.
