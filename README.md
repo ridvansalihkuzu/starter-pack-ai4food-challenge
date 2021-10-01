@@ -28,17 +28,17 @@ Code for the winning solutions will be reviewed to ensure rules have been follow
 
 The challenge is organized by [Planet](https://www.planet.com/), [Radiant Earth](https://www.radiant.earth/), [TUM](https://www.tum.de/), [DLR](https://www.dlr.de/DE/Home/home_node.html), and the [Helmholtz AI](https://www.helmholtz.ai/), and hosted by [European Space Agency](https://www.esa.int/).
 <div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="100" 
-         align="left" style="padding-top: 30px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
-    <img src="https://radiant-assets.s3.us-west-2.amazonaws.com/PrimaryREFLogo.png" width="120" 
-         align="left" style="padding-top: 1px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
-    <img src="https://www.hzdr.de/coltray/img/TUM_logo.png" width="120" 
-         align="left" style="padding-top: 30px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
-    <img src="https://www.etp4hpc.eu/img/image/fotos/dlr_logo_engl_schwarz.jpg?&q=100" width="120" 
-         align="left" style="padding-top: 30px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
-    <img src="https://www.hzdr.de/db/PicOri?pOid=60735" width="120" 
-         align="left" style="padding-top: 25px; padding-right: 5px; padding-bottom: 20px; padding-left: 15px"/>
-    <img src="https://www.arianespace.com/wp-content/uploads/2014/10/esa-logo.bmp" width="120" 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Planet_logo_New.png" width="125" 
          align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+    <img src="https://radiant-assets.s3.us-west-2.amazonaws.com/PrimaryREFLogo.png" width="145" 
+         align="left" style="padding-top: 0px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+    <img src="https://www.hzdr.de/coltray/img/TUM_logo.png" width="145" 
+         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+    <img src="https://www.etp4hpc.eu/img/image/fotos/dlr_logo_engl_schwarz.jpg?&q=100" width="145" 
+         align="left" style="padding-top: 20px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+    <img src="https://www.hzdr.de/db/PicOri?pOid=60735" width="145" 
+         align="left" style="padding-top: 15px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
+    <img src="https://www.arianespace.com/wp-content/uploads/2014/10/esa-logo.bmp" width="145" 
+         align="left" style="padding-top: 10px; padding-right: 15px; padding-bottom: 20px; padding-left: 15px"/>
     
 </div>
