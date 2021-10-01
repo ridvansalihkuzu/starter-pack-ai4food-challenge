@@ -21,8 +21,6 @@ The notebook also showcases how to generate a valid submission file.
 As per challenge rules, the following applies:
  * no data source other than the ones provided can be used to produce your outputs;
  * pre-trained models are allowed;
- * the test data cannot be used for training of the models; 
- * the target _cultivated land_ map cannot be used as an input to the method (i.e. trivial solution).
 
 Code for the winning solutions will be reviewed to ensure rules have been followed.
 
