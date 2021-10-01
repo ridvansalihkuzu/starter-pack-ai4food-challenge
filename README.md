@@ -4,7 +4,7 @@
 
 ## Get started with the challenge
 
-This notebook will get you started with downloading, exploring and analysing the input and output data of the challenge.
+This [notebook](notebook/starter-pack.ipynb) will get you started with downloading, exploring and analysing the input and output data of the challenge.
 
 The proposed challenge will focus on crop type classification based on a time-series input of _Sentinel-1_, _Sentinel-2_ and _Planet Fusion_ data. The challenge will cover two areas of interest, in Germany and South Africa, with high-quality cadastral data on field boundaries and crop types as ground truth input. 
 
